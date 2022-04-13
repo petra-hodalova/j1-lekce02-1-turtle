@@ -7,6 +7,7 @@ import java.net.*;
 import javax.imageio.*;
 import javax.swing.*;
 import net.sevecek.util.*;
+import java.lang.Math;
 
 public class Turtle {
 
@@ -132,6 +133,25 @@ public class Turtle {
     public void setSpeed(double newValue) {
         testPause();
         board.setSpeed(newValue);
+    }
+
+    public void drawHouse(double x, double y, double sizeInPixels){
+        double strecha=Math.sqrt((sizeInPixels*sizeInPixels)/2);
+        setLocation(x,y);
+        turnRight(180);
+        move(sizeInPixels);
+        turnLeft(90);
+        move(sizeInPixels);
+        turnLeft(90);
+        move(sizeInPixels);
+        turnLeft(45);
+        move(strecha);
+        turnLeft(90);
+        move(strecha);
+        turnLeft(135);
+        move(sizeInPixels);
+        turnLeft(90);
+
     }
 
     //-------------------------------------------------------------------------
@@ -303,4 +323,5 @@ public class Turtle {
         }
 
     }
+
 }

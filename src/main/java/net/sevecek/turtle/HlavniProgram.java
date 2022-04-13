@@ -8,7 +8,15 @@ public class HlavniProgram {
         Turtle zofka;
 
         zofka = new Turtle();
-        zofka.move(100);
+
+        int x=50,y=300;
+        int velikost=100;
+
+        for (int i = 0; i < 5; i++) {
+            zofka.drawHouse(x,300,velikost);
+            x=x+velikost+30;
+        }
+
 
 
     }
